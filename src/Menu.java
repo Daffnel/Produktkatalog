@@ -5,12 +5,12 @@ public class Menu {
     final private Scanner scanner;
     final private Catalog catalog;
 
-    public Menu(Catalog catalog) {
+    public Menu() {
         this.scanner = new Scanner(System.in);
-        this.catalog = catalog;
+        this.catalog = new Catalog();
     }
 
-    public void run(){
+    public void run() {
         while (true) {
             System.out.println("Welcome!");
             System.out.println("1. Add product");
@@ -27,25 +27,15 @@ public class Menu {
                         price = scanner.nextDouble();
                         scanner.nextLine();
                         break;
-                    }
-                    else{
+                    } else {
                         System.out.println("Invalid price");
                     }
                 }
                 catalog.addProduct(new Product(name, price));
-            }
-            else if (input.equalsIgnoreCase("2")) {
+            } else if (input.equalsIgnoreCase("2")) {
                 catalog.printAllProducts();
-            }
-            else if (input.equalsIgnoreCase("3")) {
+            } else if (input.equalsIgnoreCase("3")) {
                 break;
             }
         }
-    }
-
-
-package PACKAGE_NAME;
-
-public class Menu {
-
-}
+    }}
