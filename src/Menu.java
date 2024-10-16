@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Menu {
@@ -41,5 +42,10 @@ public class Menu {
             }
         }
     }
+
+
+package PACKAGE_NAME;
+
+public class Menu {
 
 }

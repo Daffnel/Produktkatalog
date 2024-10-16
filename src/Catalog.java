@@ -3,7 +3,11 @@ import java.util.ArrayList;
 public class Catalog {
     private final ArrayList<Product> allProducts;
 
+
     public Catalog() {
+
+    public Catalog(ArrayList<Product> allProducts) {
+
         this.allProducts = new ArrayList<>();
     }
 
