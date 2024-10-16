@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        //test
+        Menu menu = new Menu(new Catalog());
+        menu.run();
 
     }
 }
