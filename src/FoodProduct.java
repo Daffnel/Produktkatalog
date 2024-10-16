@@ -1,10 +1,17 @@
 public class FoodProduct extends Product{
 
-    private String bestBeforeDate;
+    private String date;
 
     public FoodProduct(String name, Double price, String date) {
         super(name, price);
 
-        this.bestBeforeDate = date;
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "FoodProduct{" +
+                "date='" + date + '\'' +
+                '}';
     }
 }
