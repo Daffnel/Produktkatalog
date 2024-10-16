@@ -4,25 +4,25 @@ public class Catalog {
     private final ArrayList<Product> allProducts;
 
 
+
+
     public Catalog() {
 
-    public Catalog(ArrayList<Product> allProducts) {
+            this.allProducts = new ArrayList<>();
+        }
 
-        this.allProducts = new ArrayList<>();
-    }
+        public void addProduct (Product product){
+            allProducts.add(product);
+            System.out.println(product + " was added to the catalog.");
+        }
 
-    public void addProduct(Product product) {
-        allProducts.add(product);
-        System.out.println(product + " was added to the catalog.");
-    }
+        public void printAllProducts () {
+            for (Product product : allProducts) {
+                System.out.println(product);
+            }
+        }
 
-    public void printAllProducts() {
-        for (Product product : allProducts) {
-            System.out.println(product);
+        public ArrayList<Product> getAllProducts () {
+            return allProducts;
         }
     }
-
-    public ArrayList<Product> getAllProducts() {
-        return allProducts;
-    }
-}
