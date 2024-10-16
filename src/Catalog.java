@@ -4,25 +4,42 @@ public class Catalog {
     private final ArrayList<Product> allProducts;
 
 
-
-
     public Catalog() {
 
-            this.allProducts = new ArrayList<>();
-        }
+        this.allProducts = new ArrayList<>();
+    }
 
-        public void addProduct (Product product){
-            allProducts.add(product);
-            System.out.println(product + " was added to the catalog.");
-        }
+    public void addProduct(Product product) {
+        allProducts.add(product);
+        System.out.println(product + " was added to the catalog.");
+    }
 
-        public void printAllProducts () {
-            for (Product product : allProducts) {
+    public void printAllProducts() {
+        printFoodProducts();
+        System.out.println();
+        printElectronicProducts();
+    }
+
+    public void printFoodProducts() {
+        System.out.println("Foods:");
+        for (Product product : allProducts) {
+            if (product instanceof FoodProduct) {
                 System.out.println(product);
             }
         }
+    }
 
-        public ArrayList<Product> getAllProducts () {
-            return allProducts;
+    public void printElectronicProducts() {
+        System.out.println("Electronics:");
+        for (Product product : allProducts) {
+            if (product instanceof ElectronicProduct) {
+                System.out.println(product);
+            }
         }
     }
+
+    public ArrayList<Product> getAllProducts() {
+        return allProducts;
+    }
+}
+
