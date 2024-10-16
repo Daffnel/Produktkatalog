@@ -4,11 +4,11 @@ public class Juices extends Product{
         super(name, price);
     }
 
-    public void OrangeJuice{
+    public void OrangeJuice(){
         System.out.println("A smidge sour");
     }
 
-    public void AppleJuice{
+    public void AppleJuice(){
         System.out.println("A tasty treat for your tastebuds!");
     }
 }
